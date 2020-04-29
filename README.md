@@ -4,6 +4,8 @@
 
 然后每间隔10秒会自动替换为另一个句子
 
+Like this:
+
 ![](https://n-source.netlify.com/img/OneTextJS-0.png)
 
 ## Usage
