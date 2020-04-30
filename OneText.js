@@ -33,7 +33,7 @@ OneText.prototype.set = function () {
     this.tag.animate({
         opacity: 0
     }, 500, () => {
-        this.textTag.text(one.text);
+        this.textTag.text(one.text).html(this.textTag.html().replace(/\n/g,'<br>'));
         var dash = (this.config.autoDash) ? '—— ' : '';
         this.fromTag && one.from && this.fromTag.text(dash + one.from);
         this.byTag && one.by && this.byTag.text(dash + one.by);
