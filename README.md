@@ -40,16 +40,22 @@ Like this:
 使用JS应用有更多的选项：
 
 ```javascript
-var oneText = new OneText(selector, [config]);
+new OneText(selector, [config]);
 ```
 
-其中`selector`为`CSS`选择器，与`jQuery`选择器相同。所有与`selector`匹配的元素都会被应用。如果匹配多个元素，则这几个元素显示的信息会是相同的。
+其中`selector`为`CSS`选择器，与`jQuery`选择器相同。所有与`selector`匹配的元素都会被应用。如果匹配多个元素，则这几个元素显示的内容会是相同的。
 
 `config`为可选的设置，可选参数有：
 
 - `interval`：替换句子的间隔时间，单位为秒，默认值为`10`。当值为`0`时将不会替换
 
 - `autoDash`：是否在作者和出处前添加破折号，默认为`true`
+
+Like this:
+
+```javascript
+var oneText = new OneText('.class-name', {interval: 20, autoDash: false});
+```
 
 此外，还可以调用每个`OneText`对象的`set`方法来替换为另一个句子：
 
