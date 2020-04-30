@@ -1,6 +1,6 @@
 function OneText(selector, config = {}) {
-    this.element = $(selector)[0];
-    this.detail = Boolean($(this.element).find('.text').length);
+    this.tag = $(selector);
+    this.detail = Boolean(this.tag.find('.text').length);
     this.config = config;
     this.libraries = (this.config.libraries === undefined) ?
         (this.detail) ? [
@@ -13,32 +13,32 @@ function OneText(selector, config = {}) {
         10 : this.config.interval;
     this.config.autoDash = (this.config.autoDash === undefined) ?
         true : this.config.autoDash;
-    this.textElement = (this.detail) ?
-        $(this.element).find('.text')[0] :
-        this.element;
-    this.byElement = ($(this.element).find('.by').length) ?
-        $(this.element).find('.by')[0] :
+    this.textTag = (this.detail) ?
+        this.tag.find('.text') :
+        this.tag;
+    this.byTag = (this.tag.find('.by').length) ?
+        this.tag.find('.by') :
         null;
-    this.fromElement = ($(this.element).find('.from').length) ?
-        $(this.element).find('.from')[0] :
+    this.fromTag = (this.tag.find('.from').length) ?
+        this.tag.find('.from') :
         null;
-    this.timeElement = ($(this.element).find('.time').length) ?
-        $(this.element).find('.time')[0] :
+    this.timeTag = (this.tag.find('.time').length) ?
+        this.tag.find('.time') :
         null;
     this.set();
 }
 OneText.prototype.set = function () {
     var lib = this.libraries[Math.floor(Math.random() * this.libraries.length)];
     var one = lib[Math.floor(Math.random() * lib.length)];
-    $(this.element).animate({
+    this.tag.animate({
         opacity: 0
     }, 500, () => {
-        $(this.textElement).text(one.text);
+        this.textTag.text(one.text);
         var dash = (this.config.autoDash) ? '—— ' : '';
-        this.fromElement && one.from && $(this.fromElement).text(dash + one.from);
-        this.byElement && one.by && $(this.byElement).text(dash + one.by);
-        this.timeElement && one.time && $(this.timeElement).text(one.time);
-        $(this.element).animate({
+        this.fromTag && one.from && this.fromTag.text(dash + one.from);
+        this.byTag && one.by && this.byTag.text(dash + one.by);
+        this.timeTag && one.time && this.timeTag.text(one.time);
+        this.tag.animate({
             opacity: 1
         }, 500);
     });
