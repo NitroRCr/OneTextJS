@@ -35,9 +35,9 @@ OneText.prototype.set = function () {
     }, 500, () => {
         this.textTag.text(one.text).html(this.textTag.html().replace(/\n/g,'<br>'));
         var dash = (this.config.autoDash) ? '—— ' : '';
-        this.fromTag && one.from && this.fromTag.text(dash + one.from);
-        this.byTag && one.by && this.byTag.text(dash + one.by);
-        this.timeTag && one.time && this.timeTag.text(one.time[one.time.length - 1]);
+        this.fromTag && this.fromTag.text((one.from) ? (dash + one.from) : '');
+        this.byTag && this.byTag.text((one.by) ? (dash + one.by) : '');
+        this.timeTag && this.timeTag.text((one.time) ? one.time[one.time.length - 1] : '');
         this.tag.animate({
             opacity: 1
         }, 500);
