@@ -25,7 +25,7 @@ function OneText(selector, config = {}) {
     this.timeTag = (this.tag.find('.time').length) ?
         this.tag.find('.time') :
         null;
-    this.set();
+    this.setInterval(this.config.interval);
 }
 OneText.prototype.set = function () {
     var lib = this.libraries[Math.floor(Math.random() * this.libraries.length)];
@@ -42,9 +42,14 @@ OneText.prototype.set = function () {
             opacity: 1
         }, 500);
     });
-    this.config.interval && setTimeout(() => {
-        this.set();
-    }, this.config.interval * 1000);
+}
+OneText.prototype.setInterval = function(interval) {
+    if (interval) {
+        this.intervalId && clearInterval(this.intervalId);
+        this.intervalId = setInterval(() => {
+            this.set();
+        }, interval * 1000);
+    }
 }
 var oneTexts = [];
 $(document).ready(function () {
