@@ -2,7 +2,7 @@
 
 在网页中让任意一个元素显示一个句子，来源于 [OneText](https://github.com/lz233/OneText-Library) 库
 
-然后每间隔10秒（默认）会自动替换为另一个句子
+然后每间隔15秒（默认）会自动替换为另一个句子
 
 Like this:
 
@@ -47,7 +47,7 @@ new OneText(selector, [config]);
 
 `config`为可选的设置，可选参数有：
 
-- `interval`：替换句子的间隔时间，单位为秒，默认值为`10`。当值为`0`时将不会替换
+- `interval`：替换句子的间隔时间，单位为秒，默认值为`15`。当值为`0`时将不会替换
 
 - `autoDash`：是否在作者和出处前添加破折号，默认为`true`
 

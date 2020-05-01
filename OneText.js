@@ -10,7 +10,7 @@ function OneText(selector, config = {}) {
             OneText.libNetease,
         ] : this.config.libraries;
     this.config.interval = (this.config.interval === undefined) ?
-        10 : this.config.interval;
+        15 : this.config.interval;
     this.config.autoDash = (this.config.autoDash === undefined) ?
         true : this.config.autoDash;
     this.textTag = (this.detail) ?
