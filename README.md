@@ -1,8 +1,8 @@
 # OneTextJS
 
-在网页中让任意一个元素显示一个句子，来源于 [OneText](https://github.com/lz233/OneText-Library) 库
+在网页中让任意一个元素显示一个句子，来源于 一言 库
 
-然后每间隔15秒（默认）会自动替换为另一个句子
+然后每间隔20秒（默认）会自动替换为另一个句子
 
 Like this:
 
@@ -47,14 +47,14 @@ new OneText(selector, [config]);
 
 `config`为可选的设置，可选参数有：
 
-- `interval`：替换句子的间隔时间，单位为秒，默认值为`15`。当值为`0`时将不会替换
-
+- `interval`：替换句子的间隔时间，单位为秒，默认值为`20`。当值为`0`时将不会替换
 - `autoDash`：是否在作者和出处前添加破折号，默认为`true`
+- `libs`：选用的库。数组，在`['official', 'netease', 'april', 'ext']`中任选一个或多个。默认为`['official', 'april']`（detail）或者 `['official', 'netease', 'april', 'ext']`。
 
 Like this:
 
 ```javascript
-var oneText = new OneText('.class-name', {interval: 20, autoDash: false});
+var oneText = new OneText('.class-name', {interval: 30, autoDash: false, libs: ['official', 'ext']});
 ```
 
 此外，还可以调用每个`OneText`对象的`set`方法来替换为另一个句子：
@@ -63,10 +63,14 @@ var oneText = new OneText('.class-name', {interval: 20, autoDash: false});
 oneText.set();
 ```
 
-## 特别感谢
+### Libs
 
-所有句子来源于：
+- official：[lz差不多是条咸鱼了](https://github.com/lz233)的[OneText 官方库](https://github.com/lz233/OneText-Library)，
 
-[OneText 官方库](https://github.com/lz233/OneText-Library)
+- netease：[imbrighter](https://github.com/2878444090)的[OneTextLibrary_Netease_Unoffical](https://github.com/2878444090/OneTextLibrary_Netease_Unoffical)
 
-[另一个库](https://github.com/2878444090/OneTextLibrary_Netease_Unoffical)
+- april：[lz已经是条咸鱼了]()的[OneText-Library](https://github.com/XiaoMengXinX/OneText-Library)中的`april.json`
+
+- ext：动态调用[Hitokoto](https://hitokoto.cn/)的`API`
+
+  所有的句子来源于以上的库，特别感谢以上的库
