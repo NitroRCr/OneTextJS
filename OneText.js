@@ -69,7 +69,7 @@ function OneText(selector, config = {}) {
         this.tag.find('.time') :
         null;
     this.setInterval(this.config.interval);
-    this.set();
+    this.set(true);
 }
 OneText.jsons = {
     official: [
@@ -1162,12 +1162,14 @@ OneText.libs = {
     april: new OneTextLib(OneText.jsons['april']),
     ext: OneText.extLib,
 }
-OneText.prototype.set = function () {
+OneText.prototype.set = function (first = false) {
     var lib = OneTextLib.randint(this.libs);
-    var one = lib.get();
+    var one = (first) ?
+        OneText.libs['official'].get() :
+        lib.get();
     this.tag.animate({
         opacity: 0
-    }, 500, () => {
+    }, (first) ? 0 : 500, () => {
         this.textTag.text(one.text).html(this.textTag.html().replace(/\n/g, '<br>'));
         var dash = (this.config.autoDash) ? '—— ' : '';
         this.fromTag && this.fromTag.text((one.from) ? (dash + one.from) : '');
