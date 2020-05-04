@@ -69,7 +69,7 @@ oneText.set();
 
 - netease：[imbrighter](https://github.com/2878444090)的[OneTextLibrary_Netease_Unoffical](https://github.com/2878444090/OneTextLibrary_Netease_Unoffical)
 
-- april：[lz已经是条咸鱼了]()的[OneText-Library](https://github.com/XiaoMengXinX/OneText-Library)中的`april.json`
+- april：[lz已经是条咸鱼了](https://github.com/XiaoMengXinX)的[OneText-Library](https://github.com/XiaoMengXinX/OneText-Library)中的`april.json`
 
 - ext：动态调用[Hitokoto](https://hitokoto.cn/)的`API`
 
