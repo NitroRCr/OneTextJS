@@ -48,16 +48,17 @@ new OneText(selector, [config]);
 `config`为可选的设置，可选参数有：
 
 - `interval`：替换句子的间隔时间，单位为秒，默认值为`20`。当值为`0`时将不会替换
-- `autoDash`：是否在作者和出处前添加破折号，默认为`true`
+- `dash`：是否在作者和出处前添加破折号，默认为`true`
+- `quote`：是否在将句子加上引号，默认为`false`
 - `libs`：选用的库。数组，在`['official', 'netease', 'april', 'ext']`中任选一个或多个。默认为`['official', 'april']`（detail）或者 `['official', 'netease', 'april', 'ext']`。
 
 Like this:
 
 ```javascript
-var oneText = new OneText('.class-name', {interval: 30, autoDash: false, libs: ['official', 'ext']});
+var oneText = new OneText('.class-name', {interval: 30, dash: false, quote: true, libs: ['official', 'ext']});
 ```
 
-此外，还可以调用每个`OneText`对象的`set`方法来替换为另一个句子：
+此外，还可以调用每个`OneText`对象的`set`方法来替换句子：
 
 ```javascript
 oneText.set();
@@ -73,4 +74,4 @@ oneText.set();
 
 - ext：动态调用[Hitokoto](https://hitokoto.cn/)的`API`
 
-  所有的句子来源于以上的库，特别感谢以上的库
+  所有的句子来源于以上的库，特别感谢
