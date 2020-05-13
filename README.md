@@ -66,12 +66,13 @@ oneText.set();
 
 ### Libs
 
-- official：[lz差不多是条咸鱼了](https://github.com/lz233)的[OneText 官方库](https://github.com/lz233/OneText-Library)，
+- official：[OneText 官方库](https://github.com/lz233/OneText-Library)，Thanks to [lz差不多是条咸鱼了](https://github.com/lz233)
 
-- netease：[imbrighter](https://github.com/2878444090)的[OneTextLibrary_Netease_Unoffical](https://github.com/2878444090/OneTextLibrary_Netease_Unoffical)
+- netease：[OneTextLibrary_Netease_Unoffical](https://github.com/2878444090/OneTextLibrary_Netease_Unoffical)，Thanks to [imbrighter](https://github.com/2878444090)
 
-- april：[lz已经是条咸鱼了](https://github.com/XiaoMengXinX)的[OneText-Library](https://github.com/XiaoMengXinX/OneText-Library)中的`april.json`
+- april：[OneText-Library](https://github.com/XiaoMengXinX/OneText-Library)中的`april.json`，Thanks to [lz已经是条咸鱼了](https://github.com/XiaoMengXinX)
 
-- ext：动态调用[Hitokoto](https://hitokoto.cn/)的`API`
+- ext：动态调用[Hitokoto](https://hitokoto.cn/)的`API，Thanks to [Hitokoto](https://hitokoto.cn/)
 
-  所有的句子来源于以上的库，特别感谢
+
+Libs 会不定期更新，~~也有可能我会忘记~~
